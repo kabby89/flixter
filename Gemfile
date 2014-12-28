@@ -1,4 +1,7 @@
 source 'https://rubygems.org'
+# Simple form gem
+gem 'simple_form'
+
 # Devise Gem for user authentication
 gem 'devise'
 
