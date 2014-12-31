@@ -1,4 +1,11 @@
 source 'https://rubygems.org'
+# Figaro gem
+gem 'figaro'
+
+# Carrierwave image gem
+gem 'carrierwave'
+gem 'fog', '~>1.3.1'
+
 # Simple form gem
 gem 'simple_form'
 
