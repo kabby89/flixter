@@ -5,6 +5,7 @@ gem 'figaro'
 # Carrierwave image gem
 gem 'carrierwave'
 gem 'fog', '~>1.3.1'
+gem 'mini_magick'
 
 # Simple form gem
 gem 'simple_form'
