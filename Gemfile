@@ -1,4 +1,7 @@
 source 'https://rubygems.org'
+# Ranked Model for ordered lessons
+gem 'ranked-model'
+
 # Stripe payment gem
 gem 'stripe'
 
