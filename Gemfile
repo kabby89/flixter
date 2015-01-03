@@ -1,4 +1,7 @@
 source 'https://rubygems.org'
+# Stripe payment gem
+gem 'stripe'
+
 # Figaro gem
 gem 'figaro'
 
