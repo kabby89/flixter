@@ -1,4 +1,7 @@
 source 'https://rubygems.org'
+# JQuery UI gem
+gem 'jquery-ui-rails'
+
 # Ranked Model for ordered lessons
 gem 'ranked-model'
 
