@@ -1,11 +1,8 @@
 class Instructor::SectionsController < ApplicationController
 before_action :authenticate_user!
-before_action :require_authentication_for_course_user, :only => [:new, :create]
-# before_action :require_authentication_for_section_reorder, :only => [:update]
+before_action :require_authentication_for_course_user, :only => [:create]
+before_action :require_authentication_for_section_reorder, :only => [:update]
 
-	def new
-		@section = Section.new
-	end
 
 	def create
 		@section = current_course.sections.create(section_params)
@@ -18,11 +15,11 @@ before_action :require_authentication_for_course_user, :only => [:new, :create]
 	end
 
 	private
-	# def require_authentication_for_section_reorder
-	#	if current_section.user != current_user
-	#		return render :text => 'Unauthorized', :status => :unauthorized
-	#	end
-	# end
+	def require_authentication_for_section_reorder
+		if current_section.user != current_user
+			return render :text => 'Unauthorized', :status => :unauthorized
+		end
+	end
 
 	def require_authentication_for_course_user
 		if current_course.user != current_user

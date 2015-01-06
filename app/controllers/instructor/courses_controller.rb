@@ -12,6 +12,7 @@ before_action :require_authentication_for_course_user, :only => [:show]
 	end
 
 	def show
+		@section = Section.new
 	end
 
 	private
