@@ -16,7 +16,7 @@ before_action :require_authentication_for_section_reorder, :only => [:update]
 
 	private
 	def require_authentication_for_section_reorder
-		if current_section.user != current_user
+		if current_section.course.user != current_user
 			return render :text => 'Unauthorized', :status => :unauthorized
 		end
 	end
